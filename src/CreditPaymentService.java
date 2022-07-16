@@ -1,12 +1,15 @@
 import static java.lang.Math.pow;
 
 public class CreditPaymentService {
-    public double calculate(double inRt, double per) {
+    public double calculate(double rate, double period, double amount) {
+        double monthpay;
 
-        double cof;
-        double i1 = Math.pow(1 + inRt, per);
+        double i = Math.pow(1 + rate, period);
 
-        return cof = (inRt * i1) / (i1 - 1);
+        double cof = (rate * i) / (i - 1);
+
+        return monthpay = (int) (cof * amount);
+
 
     }
 }
